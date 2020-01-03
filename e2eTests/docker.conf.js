@@ -3,8 +3,8 @@ exports.config = {
   output: './output',
   helpers: {
     WebDriver: {
-      url: 'https://vnexpress.net/',
-      host: 'selenium-ch',
+      url: process.env.UrlToTest,
+      host: 'chrome-container',
       port: 4444,
       browser: 'chrome',
       smartWait: 5000,
