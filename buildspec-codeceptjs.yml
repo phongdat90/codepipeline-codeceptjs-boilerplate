@@ -3,7 +3,7 @@ version: 0.2
 phases:
   install:
     commands:
-    - git clone https://github.com/therealtimhawkins/codepipeline-codeceptjs-boilerplate
+    - git clone https://github.com/phongdat90/codepipeline-codeceptjs-boilerplate.git
     - cd codepipeline-codeceptjs-boilerplate
 
   pre_build:
