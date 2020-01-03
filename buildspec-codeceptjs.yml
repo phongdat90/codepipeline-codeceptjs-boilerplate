@@ -1,0 +1,19 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+    - git clone https://github.com/therealtimhawkins/codepipeline-codeceptjs-boilerplate
+    - cd codepipeline-codeceptjs-boilerplate
+
+  pre_build:
+    commands:
+    - docker-compose up -d --build
+
+  build:
+    commands:
+    - docker exec codeceptio-container npm run test:e2e
+
+  post_build:
+    commands:
+    - echo "Build has completed."
